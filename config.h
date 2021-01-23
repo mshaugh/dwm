@@ -48,7 +48,6 @@ static const char *colors[][3]      = {
 	[SchemeCol14] = { col14, col0, col0  },
 	[SchemeCol15] = { col15, col0, col0  },
 };
-static const char dmenufont[] = "monospace:size=12";
 static const char *fonts[]          = {
 	"monospace:size=12",
 	"Apple Color Emoji:size=10",
@@ -93,7 +92,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col0, "-nf", col15, "-sb", col4, "-sf", col15, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
 static Key keys[] = {
